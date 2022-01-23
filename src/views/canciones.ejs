@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'Musicando' }) %>
+
+  <body>
+    <%- include('partials/nav', {navtitle: 'Navegador' }) %>
+      <h1>Todas las canciones</h1>
+      <ul>
+        <% canciones.forEach(function(cancion){ %>
+          <%- include('partials/cancion', {cancion: cancion}) %>
+            <% }); %>
+      </ul>
+      <h2>Añadi tu cancion!</h2>
+      <form action="" method="post">
+        <div>
+          <label>ID</label>
+          <input type="number" name="id" placeholder="ID">
+        </div>
+        <div>
+          <label>Titulo</label>
+          <input type="text" name="titulo" placeholder="Titulo">
+        </div>
+        <div>
+          <label>Duracion</label>
+          <input type="number" name="duracion" placeholder="Duracion">
+        </div>
+        <div>
+          <label>Genero</label>
+          <input type="number" name="genero_id" placeholder="Genero">
+        </div>
+        <div>
+          <label>Album</label>
+          <input type="number" name="album_id" placeholder="Album">
+        </div>
+        <div>
+          <label>Artista</label>
+          <input type="number" name="artista_id" placeholder="Artista">
+        </div>
+        <input type="submit" value="Crear">
+      </form>
+  </body>
+
+</html>
